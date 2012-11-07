@@ -41,6 +41,7 @@ nmap wm :WMToggle<cr>
 nmap tl :TlistToggle<cr>
 set sw=4 
 set ts=4
+let Tlist_GainFocus_On_ToggleOpen=1 	" 切换到tag窗口焦点在tag窗口上
 
 "FuzzyFinder
 
@@ -48,7 +49,8 @@ nmap ft :FufTag<cr>		"根据生成的tag查找
 nmap ff :FufFile<cr>		"在当前目录查找
 nmap fd :FufDir<cr>		" 查找目录名称并切换当前目录
 nmap fb :FufBuffer<cr>	" 在缓冲区中查找
- 
+
+
 autocmd FileType python setlocal et sta sw=4 sts=4
 set hlsearch
 
@@ -59,4 +61,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 \ 'html_header': '~/vimwiki/template/header.tpl',}]
 
 "指定tags文件 ，根据阅读源码的需要修改
-set tags=/Users/mac/develop/chromium/src/tags
+set tags=/Users/mac/develop/chromium/src/content/tags
+"set tags+=/Users/mac/develop/chromium/src/base/tags
+"set tags+=./tags,tags,../tags,../../tags
+"set tags+=/home/hunch/.vim/ctags
+"set tags+=/home/hunch/.vim/glibctag
