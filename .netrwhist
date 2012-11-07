@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/mac/develop/chromium/src/content/shell/android/java/src/org'
+let g:netrw_dirhist_2='/Users/mac/develop/chromium/src/content/shell/android/java/src/org/chromium'
+let g:netrw_dirhist_3='/Users/mac/develop/chromium/src/content/shell/android/java/src/org/chromium/content_shell'
+let g:netrw_dirhist_4='/Users/mac/.vim'
+let g:netrw_dirhist_5='/Users/mac/develop/chromium/src/content/shell'
