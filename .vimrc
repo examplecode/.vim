@@ -54,6 +54,11 @@ nmap fb :FufBuffer<cr>	" 在缓冲区中查找
 autocmd FileType python setlocal et sta sw=4 sts=4
 set hlsearch
 
+"javacomplete
+autocmd Filetype java set omnifunc=javacomplete#Complete 
+autocmd Filetype java set completefunc=javacomplete#CompleteParamsInf
+autocmd Filetype java,javascript,jsp inoremap <buffer> . .<C-X><C-O><C-P>
+
 "vimwiki
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_list = [{'path': '~/vimwiki/',
