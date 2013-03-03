@@ -66,8 +66,12 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 \ 'html_header': '~/vimwiki/template/header.tpl',}]
 
 "指定tags文件 ，根据阅读源码的需要修改
-set tags=/Users/mac/develop/chromium/src/content/tags
-"set tags+=/Users/mac/develop/chromium/src/base/tags
+"set tags=/Users/mac/develop/chromium/src/tags
+set tags+=/Users/mac/develop/android_src_4.1/tags
+set tags+=/Users/mac/develop/tags/app
 "set tags+=./tags,tags,../tags,../../tags
 "set tags+=/home/hunch/.vim/ctags
 "set tags+=/home/hunch/.vim/glibctag
+
+
+let g:C_SourceCodeExtensions  = 'h cc cp cxx cpp CPP c++ C i ii'
