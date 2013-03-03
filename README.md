@@ -1,45 +1,42 @@
 #我的VIM 插件# 
 
-{{tag>vim,plugin}}
 
 ## vimrc配置 ##
 
-<file>
-" ##############################=
-" File: _vimrc
-" Last Change: 1 September, 2011
-"
-"##############################=
-set autochdir               " 自动切换当前目录为当前文件所在的目录
-set cursorline              " 突出显示当前行
-set equalalways             " 分割窗口时保持相等的宽/高
-set nocompatible            " 关闭 vi 兼容模式
-"set number                  " 显示行号
-set nobackup                " 覆盖文件时不备份
-set noswapfile              " 编辑时不产生交换文件
-set noexpandtab             " 插入 tab 符号不以空格替换
-set history=1000            " 设置冒号命令和搜索命令的命令历史列表的长度
-set autoindent              " 开启自动缩进
-set smartindent             " 开启新行时使用智能自动缩进
-set smarttab                " 开启新行时使用智能 tab 缩进
-set tabstop=4               " 设定 tab 长度为 4
-set shiftwidth=4            " 设定 << 和 >> 命令移动时的宽度为 4
-set showmatch               " 插入括号时，短暂地跳转到匹配的对应括号
-"set guifont=Bitstream_Vera_Sans_Mono:h12:b:cANSI
-set backspace=indent,eol,start
-" 不设定在插入状态无法用退格键和 Delete 键删除回车符
-set guioptions=t            " 隐藏菜单栏、工具栏、滚动条
-set ruler                   " 打开状态栏标尺
-set incsearch               " 输入搜索内容时就显示搜索结果
-set hlsearch                " 搜索时高亮显示被找到的文本
-set ignorecase              " 搜索时忽略大小写
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+	" ##############################=
+	" File: _vimrc
+	" Last Change: 1 September, 2011
+	"
+	"##############################=
+	set autochdir               " 自动切换当前目录为当前文件所在的目录
+	set cursorline              " 突出显示当前行
+	set equalalways             " 分割窗口时保持相等的宽/高
+	set nocompatible            " 关闭 vi 兼容模式
+	"set number                  " 显示行号
+	set nobackup                " 覆盖文件时不备份
+	set noswapfile              " 编辑时不产生交换文件
+	set noexpandtab             " 插入 tab 符号不以空格替换
+	set history=1000            " 设置冒号命令和搜索命令的命令历史列表的长度
+	set autoindent              " 开启自动缩进
+	set smartindent             " 开启新行时使用智能自动缩进
+	set smarttab                " 开启新行时使用智能 tab 缩进
+	set tabstop=4               " 设定 tab 长度为 4
+	set shiftwidth=4            " 设定 << 和 >> 命令移动时的宽度为 4
+	set showmatch               " 插入括号时，短暂地跳转到匹配的对应括号
+	"set guifont=Bitstream_Vera_Sans_Mono:h12:b:cANSI
+	set backspace=indent,eol,start
+	" 不设定在插入状态无法用退格键和 Delete 键删除回车符
+	set guioptions=t            " 隐藏菜单栏、工具栏、滚动条
+	set ruler                   " 打开状态栏标尺
+	set incsearch               " 输入搜索内容时就显示搜索结果
+	set hlsearch                " 搜索时高亮显示被找到的文本
+	set ignorecase              " 搜索时忽略大小写
+	set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+	
+	syntax on                   " 自动语法高亮
+	
+	filetype plugin indent on
 
-syntax on                   " 自动语法高亮
-
-filetype plugin indent on
-
-</file>
 
 ## snipMate.vim ##
 
@@ -69,14 +66,12 @@ unzip vim-fuzzyfinder.zip
 ### 设置 ###
 
 增加快捷健映射，比如在vim中输入"ft" 就可以激活Tag查找模式.
-<file>
-vim ~/.vimrc
-"FuzzyFinder
-nmap ft :FufTag<cr>     "根据生成的tag查找，需要先执行ctags -R 命令生成tag文件                                                                                                                                                      
-nmap ff :FufFile<cr>        "在当前目录查找
-nmap fd :FufDir<cr>     " 查找目录名称并切换当前目录
-nmap fb :FufBuffer<cr>  " 在缓冲区中查找
-</file>
+	vim ~/.vimrc
+	"FuzzyFinder
+	nmap ft :FufTag<cr>     "根据生成的tag查找，需要先执行ctags -R 命令生成tag文件                                                                                                                                                      
+	nmap ff :FufFile<cr>        "在当前目录查找
+	nmap fd :FufDir<cr>     " 查找目录名称并切换当前目录
+	nmap fb :FufBuffer<cr>  " 在缓冲区中查找
 
 
 ### 技巧 ###
@@ -89,34 +84,30 @@ nmap fb :FufBuffer<cr>  " 在缓冲区中查找
 下载地址 http://www.vim.org/scripts/script.php?script_id=213
 
 ### 安装 ###
-<file>
-cd ~/.vim
-unzip vim.zip
-</file>
+	cd ~/.vim
+	unzip vim.zip
 
 ### 启用插件 ###
 
-<file>
-vim ~/.vimrc
-#增加下面一行
-filetype plugin on
-</file>
+	vim ~/.vimrc
+	#增加下面一行
+	filetype plugin on
 
 ### 技巧及常用命令 ###
 修改c文件注释头模板
-<file>
-~/.vim/c-support/templates/Templates
-</file>
+	~/.vim/c-support/templates/Templates
 
 常用命令
-<file>
-\im 生成main函数模板
-\if 生成函数模板
-</file>
+	\im 生成main函数模板
+	\if 生成函数模板
 
 
 
 ## a.vim 切换源文件和头文件 ##
+
+命令模式下输入":A" 切换头文件及源文件
+
+
 下载地址 http://www.vim.org/scripts/download_script.php?src_id=7218
 
 ### 安装方法 ###
